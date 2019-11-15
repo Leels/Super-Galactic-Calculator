@@ -2,9 +2,13 @@ import { GalacticAge } from './../src/backend.js';
 
 
 describe ('GalacticAge', () => {
-  test('should correctly determine users age in earth from birthdate input', () => {
+  test('should correctly determine users age in earth years from birthdate input', () => {
     const newGalacticAge = new GalacticAge("September 19, 1987");
-    newGalacticAge.calculateAge("September 19, 1987");
-    expect(newGalacticAge.age).toEqual(32);
+    newGalacticAge.calculateEarthAge("September 19, 1987");
+    expect(newGalacticAge.earthAge).toEqual(32);
   });
+  test('should correctly determine users age in mercury years from birthdate input', () => {
+    const newGalacticAge = new GalacticAge("September 19, 1987");
+    newGalacticAge.calculateMercuryAge("September 19, 1987");
+    expect(newGalacticAge.age).toEqual(133);
 });

@@ -10,3 +10,4 @@ newGalacticAge.calculateEarthAge();
 newGalacticAge.calculateMercuryAge();
 newGalacticAge.calculateVenusAge();
 newGalacticAge.calculateMarsAge();
+newGalacticAge.calculateJupiterAge();

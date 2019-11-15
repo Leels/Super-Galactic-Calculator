@@ -23,4 +23,9 @@ describe ('GalacticAge', () => {
     newGalacticAge.calculateMarsAge("September 19, 1987");
     expect(newGalacticAge.marsAge).toEqual(17);
   });
+
+  test('should correctly determine users age in jupiter years from birthdate input', () => {
+    newGalacticAge.calculateJupiterAge("September 19, 1987");
+    expect(newGalacticAge.jupiterAge).toEqual(2);
+  });
 });

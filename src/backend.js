@@ -1,7 +1,8 @@
 //Backend logic for Super Galactic Age Calculator//
 export function GalacticAge(birthdate) {
   this.birthdate =  birthdate,
-  this.earthAge = 0;
+  this.earthAge = 0,
+  this.mercuryAge = 0;
 }
 
 GalacticAge.prototype.calculateEarthAge = function(birthdate) {
@@ -15,5 +16,11 @@ GalacticAge.prototype.calculateEarthAge = function(birthdate) {
   var year = day*365;
   var ageInYears = Math.round(ageInMilliseconds/year);
   this.earthAge = ageInYears;
-  return this.age;
+  return this.earthAge;
+};
+
+GalacticAge.prototype.calculateMercuryAge = function() {
+  // newGalacticAge.calculateEarthAge(birthdate);
+  this.mercuryAge = this.earthAge / .24;
+  return this.mercuryAge;
 };

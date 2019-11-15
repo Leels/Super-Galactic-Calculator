@@ -10,5 +10,6 @@ describe ('GalacticAge', () => {
   test('should correctly determine users age in mercury years from birthdate input', () => {
     const newGalacticAge = new GalacticAge("September 19, 1987");
     newGalacticAge.calculateMercuryAge("September 19, 1987");
-    expect(newGalacticAge.age).toEqual(133);
+    expect(newGalacticAge.mercuryAge).toEqual(133);
+    });
 });

@@ -6,4 +6,5 @@ import { GalacticAge } from './backend.js';
 
 const newGalacticAge = new GalacticAge("September 19, 1987");
 
-newGalacticAge.calculateAge();
+newGalacticAge.calculateEarthAge();
+newGalacticAge.calculateMercuryAge();

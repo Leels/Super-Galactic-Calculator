@@ -1,5 +1,4 @@
-//Backend logic for Super Galactic Age Calculator//
-
+//Backend logic for Super Galactic Age Calculator--
 
 export function GalacticAge(birthdate) {
   this.birthdate =  birthdate,
@@ -10,7 +9,6 @@ export function GalacticAge(birthdate) {
   this.jupiterAge = 0;
 }
 
-
 GalacticAge.prototype.calculateEarthAge = function(birthdate) {
   let dateParseMethod = Date.parse(birthdate);
   let dateNowMethod = Date.now();
@@ -19,8 +17,8 @@ GalacticAge.prototype.calculateEarthAge = function(birthdate) {
   let minute = second*60;
   let hour = minute*60;
   let day = hour*24;
-  var year = day*365;
-  var ageInYears = Math.floor(ageInMilliseconds/year);
+  let year = day*365;
+  let ageInYears = Math.floor(ageInMilliseconds/year);
   this.earthAge = ageInYears;
   return this.earthAge;
 };
@@ -29,8 +27,8 @@ GalacticAge.prototype.calculateMercuryAge = function(birthdate) {
   let dateParseMethod = Date.parse(birthdate);
   let dateNowMethod = Date.now();
   let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  //8.64e+7=second*minute*hour*day in e notation
-  var ageInMercuryYears = Math.floor((ageInMilliseconds/8.64e+7)/88);
+  //8.64e+7 = second*minute*hour*day in e notation--
+  let ageInMercuryYears = Math.floor((ageInMilliseconds/8.64e+7)/88);
   this.mercuryAge = ageInMercuryYears;
   return this.mercuryAge;
 };
@@ -39,7 +37,7 @@ GalacticAge.prototype.calculateVenusAge = function(birthdate) {
   let dateParseMethod = Date.parse(birthdate);
   let dateNowMethod = Date.now();
   let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  var ageInVenusYears = Math.floor((ageInMilliseconds/8.64e+7)/225);
+  let ageInVenusYears = Math.floor((ageInMilliseconds/8.64e+7)/225);
   this.venusAge = ageInVenusYears;
   return this.venusAge;
 };
@@ -48,7 +46,7 @@ GalacticAge.prototype.calculateMarsAge = function(birthdate) {
   let dateParseMethod = Date.parse(birthdate);
   let dateNowMethod = Date.now();
   let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  var ageInMarsYears = Math.floor((ageInMilliseconds/8.64e+7)/687);
+  let ageInMarsYears = Math.floor((ageInMilliseconds/8.64e+7)/687);
   this.marsAge = ageInMarsYears;
   return this.marsAge;
 };
@@ -57,7 +55,7 @@ GalacticAge.prototype.calculateJupiterAge = function(birthdate) {
   let dateParseMethod = Date.parse(birthdate);
   let dateNowMethod = Date.now();
   let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  var ageInJupiterYears = Math.floor((ageInMilliseconds/8.64e+7)/4307);
+  let ageInJupiterYears = Math.floor((ageInMilliseconds/8.64e+7)/4307);
   this.jupiterAge = ageInJupiterYears;
   return this.jupiterAge;
 };

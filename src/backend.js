@@ -5,7 +5,8 @@ export function GalacticAge(birthdate) {
   this.birthdate =  birthdate,
   this.earthAge = 0,
   this.mercuryAge = 0,
-  this.venusAge = 0;
+  this.venusAge = 0,
+  this.marsAge = 0;
 }
 
 

@@ -28,11 +28,8 @@ GalacticAge.prototype.calculateMercuryAge = function(birthdate) {
   let dateParseMethod = Date.parse(birthdate);
   let dateNowMethod = Date.now();
   let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  let second = 1000;
-  let minute = second*60;
-  let hour = minute*60;
-  let day = hour*24;
-  var ageInMercuryYears = Math.round((ageInMilliseconds/day)/88);
+  //8.64e+7=second*minute*hour*day in e notation
+  var ageInMercuryYears = Math.round((ageInMilliseconds/8.64e+7)/88);
   this.mercuryAge = ageInMercuryYears;
   return this.mercuryAge;
 };
@@ -41,11 +38,16 @@ GalacticAge.prototype.calculateVenusAge = function(birthdate) {
   let dateParseMethod = Date.parse(birthdate);
   let dateNowMethod = Date.now();
   let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  let second = 1000;
-  let minute = second*60;
-  let hour = minute*60;
-  let day = hour*24;
-  var ageInVenusYears = Math.round((ageInMilliseconds/day)/225);
+  var ageInVenusYears = Math.round((ageInMilliseconds/8.64e+7)/225);
   this.venusAge = ageInVenusYears;
   return this.venusAge;
+};
+
+GalacticAge.prototype.calculateMarsAge = function(birthdate) {
+  let dateParseMethod = Date.parse(birthdate);
+  let dateNowMethod = Date.now();
+  let ageInMilliseconds = dateNowMethod - dateParseMethod;
+  var ageInMarsYears = Math.round((ageInMilliseconds/8.64e+7)/687);
+  this.marsAge = ageInMarsYears;
+  return this.marsAge;
 };

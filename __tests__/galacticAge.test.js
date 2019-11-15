@@ -28,4 +28,10 @@ describe ('GalacticAge', () => {
     newGalacticAge.calculateJupiterAge("September 19, 1987");
     expect(newGalacticAge.jupiterAge).toEqual(2);
   });
+
+  test('should correctly determine how many earth years the user has left', () => {
+    let earthYearsLeft = 79 - newGalacticAge.earthAge;
+    newGalacticAge.calculateEarthYearsLeft("September 19, 1987");
+    expect(earthYearsLeft).toEqual(47);
+  });
 });

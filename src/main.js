@@ -11,7 +11,6 @@ $(document).ready(function() {
     const newGalacticAge = new GalacticAge(birthdate);
     $("#result").show();
     $("#earth-years").text(newGalacticAge.calculateEarthAge(birthdate));
-    console.log("Hi");
     $("#mercury-years").text(newGalacticAge.calculateMercuryAge(birthdate));
     $("#venus-years").text(newGalacticAge.calculateEarthAge(birthdate));
     $("#mars-years").text(newGalacticAge.calculateMarsAge(birthdate));

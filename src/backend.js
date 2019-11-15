@@ -59,3 +59,8 @@ GalacticAge.prototype.calculateJupiterAge = function(birthdate) {
   this.jupiterAge = ageInJupiterYears;
   return this.jupiterAge;
 };
+
+GalacticAge.prototype.calculateEarthYearsLeft = function() {
+  let earthYearsLeft = 79 - this.earthAge;
+  return earthYearsLeft;
+};

@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Super Galactic Age Calvulator</title>
+    <title>Super Galactic Age Calculator</title>
   </head>
   <body>
-
+    <div class="container">
+      <h1>Super Galactic Age Calculator</h1>
+      <form id="find-galactic-age">
+        <div class="form-group">
+          <label for="birthdate">Enter your birthdate to find your age thoughout our solar system:</label>
+          <input type="text" id="birthdate" placeholder="November 15, 2019">
+        </div>
+        <button type="submit" class="btn btn-primary">Blast off!</button>
+      </form>
+      <div id="result"></div>
+      <h3>Your solar age in Earth Years: <span id="earth-years"></span></h3>
+      <h3>Your solar age in Mercurian Years: <span id="mercury-years"></span></h3>
+      <h3>Your solar age in Venusian Years: <span id="venus-years"></span></h3>
+      <h3>Your solar age in Martian Years: <span id="mars-years"></span></h3>
+      <h3>Your solar age in Jovian Years: <span id="jupiter-years"></span></h3>
+    </div>
   </body>
 </html>

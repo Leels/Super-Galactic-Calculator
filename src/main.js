@@ -8,3 +8,4 @@ const newGalacticAge = new GalacticAge("September 19, 1987");
 
 newGalacticAge.calculateEarthAge();
 newGalacticAge.calculateMercuryAge();
+newGalacticAge.calculateVenusAge();

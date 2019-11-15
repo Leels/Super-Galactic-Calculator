@@ -17,6 +17,6 @@ describe ('GalacticAge', () => {
   test('should correctly determine users age in venus years from birthdate input', () => {
     const newGalacticAge = new GalacticAge("September 19, 1987");
     newGalacticAge.calculateVenusAge("September 19, 1987");
-    expect(newGalacticAge.mercuryAge).toEqual(52);
+    expect(newGalacticAge.venusAge).toEqual(52);
   });
 });

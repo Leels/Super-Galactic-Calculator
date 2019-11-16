@@ -12,7 +12,7 @@ $(document).ready(function() {
     $("#result").show();
     $("#earth-years").text(newGalacticAge.calculateEarthAge(birthdate));
     $("#mercury-years").text(newGalacticAge.calculateMercuryAge(birthdate));
-    $("#venus-years").text(newGalacticAge.calculateEarthAge(birthdate));
+    $("#venus-years").text(newGalacticAge.calculateVenusAge(birthdate));
     $("#mars-years").text(newGalacticAge.calculateMarsAge(birthdate));
     $("#jupiter-years").text(newGalacticAge.calculateJupiterAge(birthdate));
 

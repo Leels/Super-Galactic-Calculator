@@ -64,3 +64,8 @@ GalacticAge.prototype.calculateEarthYearsLeft = function() {
   let earthYearsLeft = 79 - this.earthAge;
   return earthYearsLeft;
 };
+
+GalacticAge.prototype.calculateMercuryYearsLeft = function() {
+  let mercuryYearsLeft = 79 - newGalacticAge.mercuryAge;
+  return mercuryYearsLeft;
+};

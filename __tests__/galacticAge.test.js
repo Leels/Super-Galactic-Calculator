@@ -34,4 +34,10 @@ describe ('GalacticAge', () => {
     newGalacticAge.calculateEarthYearsLeft("September 19, 1987");
     expect(earthYearsLeft).toEqual(47);
   });
+
+  test('should correctly determine how many mercury years the user has left', () => {
+    let mercuryYearsLeft = 79 - newGalacticAge.mercuryAge;
+    newGalacticAge.calculateEarthYearsLeft("September 19, 1987");
+    expect(mercuryYearsLeft).toEqual(-54);
+  });
 });

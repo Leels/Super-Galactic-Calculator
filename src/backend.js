@@ -66,6 +66,21 @@ GalacticAge.prototype.calculateEarthYearsLeft = function() {
 };
 
 GalacticAge.prototype.calculateMercuryYearsLeft = function() {
-  let mercuryYearsLeft = 79 - newGalacticAge.mercuryAge;
+  let mercuryYearsLeft = 79 - this.mercuryAge;
   return mercuryYearsLeft;
+};
+
+GalacticAge.prototype.calculateMarsYearsLeft = function() {
+  let marsYearsLeft = 79 - this.marsAge;
+  return marsYearsLeft;
+};
+
+GalacticAge.prototype.calculateVenusYearsLeft = function() {
+  let venusYearsLeft = 79 - this.venusAge;
+  return venusYearsLeft;
+};
+
+GalacticAge.prototype.calculateJupiterYearsLeft = function() {
+  let jupiterYearsLeft = 79 - this.jupiterAge;
+  return jupiterYearsLeft;
 };

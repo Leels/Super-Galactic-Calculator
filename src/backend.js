@@ -60,6 +60,15 @@ GalacticAge.prototype.calculateJupiterAge = function(birthdate) {
   return this.jupiterAge;
 };
 
+GalacticAge.prototype.calculateSaturnAge = function(birthdate) {
+  let dateParseMethod = Date.parse(birthdate);
+  let dateNowMethod = Date.now();
+  let ageInMilliseconds = dateNowMethod - dateParseMethod;
+  let ageInSaturnYears = Math.floor((ageInMilliseconds/8.64e+7)/10731);
+  this.saturnAge = ageInSaturnYears;
+  return this.saturnAge;
+};
+
 GalacticAge.prototype.calculateEarthYearsLeft = function() {
   let earthYearsLeft = 79 - this.earthAge;
   return earthYearsLeft;

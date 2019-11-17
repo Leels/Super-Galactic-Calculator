@@ -44,6 +44,7 @@ $(document).ready(function() {
     $("#venus-years").text(newGalacticAge.calculateVenusAge(birthdate));
     $("#mars-years").text(newGalacticAge.calculateMarsAge(birthdate));
     $("#jupiter-years").text(newGalacticAge.calculateJupiterAge(birthdate));
+    $("#saturn-years").text(newGalacticAge.calculateSaturnAge(birthdate));
 
   });
 });

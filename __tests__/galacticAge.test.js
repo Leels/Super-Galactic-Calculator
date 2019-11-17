@@ -29,6 +29,11 @@ describe ('GalacticAge', () => {
     expect(newGalacticAge.jupiterAge).toEqual(2);
   });
 
+  test('should correctly determine users age in saturn years from birthdate input', () => {
+    newGalacticAge.calculateSaturnAge("September 19, 1987");
+    expect(newGalacticAge.saturnAge).toEqual(1);
+  });
+
   test('should correctly determine how many earth years the user has left', () => {
     let earthYearsLeft = 79 - newGalacticAge.earthAge;
     newGalacticAge.calculateEarthYearsLeft("September 19, 1987");

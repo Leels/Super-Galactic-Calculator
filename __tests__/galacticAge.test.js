@@ -63,4 +63,10 @@ describe ('GalacticAge', () => {
     newGalacticAge.calculateJupiterYearsLeft("September 19, 1987");
     expect(jupiterYearsLeft).toEqual(77);
   });
+
+  test('should correctly determine how many saturn years the user has left', () => {
+    let saturnYearsLeft = 79 - newGalacticAge.saturnAge;
+    newGalacticAge.calculateSaturnYearsLeft("September 19, 1987");
+    expect(saturnYearsLeft).toEqual(78);
+  });
 });

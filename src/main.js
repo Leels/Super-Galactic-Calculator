@@ -28,23 +28,20 @@ $(document).ready(function() {
   $("#saturn").click(function() {
     $("#saturn p").toggle();
   });
-  $("#uranus").click(function() {
-    $("#uranus p").toggle();
-  });
-  $("#neptune").click(function() {
-    $("#neptune p").toggle();
-  });
-  $("#pluto").click(function() {
-    $("#pluto p").toggle();
-  });
 
     $("#result").show();
-    $("#earth-years").text(newGalacticAge.calculateEarthAge(birthdate));
     $("#mercury-years").text(newGalacticAge.calculateMercuryAge(birthdate));
+    $("#mercury-years-left").text(newGalacticAge.calculateMercuryYearsLeft(birthdate));
     $("#venus-years").text(newGalacticAge.calculateVenusAge(birthdate));
+    $("#venus-years-left").text(newGalacticAge.calculateVenusYearsLeft(birthdate));
+    $("#earth-years").text(newGalacticAge.calculateEarthAge(birthdate));
+    $("#earth-years-left").text(newGalacticAge.calculateEarthYearsLeft(birthdate));
     $("#mars-years").text(newGalacticAge.calculateMarsAge(birthdate));
+    $("#mars-years-left").text(newGalacticAge.calculateMarsYearsLeft(birthdate));
     $("#jupiter-years").text(newGalacticAge.calculateJupiterAge(birthdate));
+    $("#jupiter-years-left").text(newGalacticAge.calculateJupiterYearsLeft(birthdate));
     $("#saturn-years").text(newGalacticAge.calculateSaturnAge(birthdate));
+    $("#saturn-years-left").text(newGalacticAge.calculateSaturnYearsLeft(birthdate));
 
   });
 });

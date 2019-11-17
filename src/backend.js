@@ -6,7 +6,8 @@ export function GalacticAge(birthdate) {
   this.mercuryAge = 0,
   this.venusAge = 0,
   this.marsAge = 0,
-  this.jupiterAge = 0;
+  this.jupiterAge = 0,
+  this.saturnAge = 0;
 }
 
 GalacticAge.prototype.calculateEarthAge = function(birthdate) {
@@ -92,4 +93,9 @@ GalacticAge.prototype.calculateVenusYearsLeft = function() {
 GalacticAge.prototype.calculateJupiterYearsLeft = function() {
   let jupiterYearsLeft = 79 - this.jupiterAge;
   return jupiterYearsLeft;
+};
+
+GalacticAge.prototype.calculateSaturnYearsLeft = function() {
+  let saturnYearsLeft = 79 - this.saturnAge;
+  return saturnYearsLeft;
 };

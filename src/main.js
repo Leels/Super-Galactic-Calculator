@@ -8,27 +8,32 @@ $(document).ready(function() {
   $("form#find-galactic-age").submit(function(event) {
     event.preventDefault();
     const birthdate = $("input#birthdate").val();
-    const newGalacticAge = new GalacticAge(birthdate);
+    const sex = $('input[name=sex]:checked').val();
+    const smoker = $('input[name=smoker]:checked').val();
+    const newGalacticAge = new GalacticAge(birthdate, sex, smoker);
+
+    newGalacticAge.calculateYearsLeft(sex, smoker);
 
     $("#mercury").click(function() {
-    $("#mercury p").toggle();
-  });
-  $("#venus").click(function() {
-    $("#venus p").toggle();
-  });
-  $("#earth").click(function() {
-    $("#earth p").toggle();
-  });
-  $("#mars").click(function() {
-    $("#mars p").toggle();
-  });
-  $("#jupiter").click(function() {
-    $("#jupiter p").toggle();
-  });
-  $("#saturn").click(function() {
-    $("#saturn p").toggle();
-  });
+      $("#mercury p").toggle();
+    });
+    $("#venus").click(function() {
+      $("#venus p").toggle();
+    });
+    $("#earth").click(function() {
+      $("#earth p").toggle();
+    });
+    $("#mars").click(function() {
+      $("#mars p").toggle();
+    });
+    $("#jupiter").click(function() {
+      $("#jupiter p").toggle();
+    });
+    $("#saturn").click(function() {
+      $("#saturn p").toggle();
+    });
 
+    $("#find-galactic-age").hide();
     $("#result").show();
     $("#mercury-years").text(newGalacticAge.calculateMercuryAge(birthdate));
     $("#mercury-years-left").text(newGalacticAge.calculateMercuryYearsLeft(birthdate));

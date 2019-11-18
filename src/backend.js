@@ -1,13 +1,16 @@
 //Backend logic for Super Galactic Age Calculator--
 
-export function GalacticAge(birthdate) {
+export function GalacticAge(birthdate, sex, smoker) {
   this.birthdate =  birthdate,
+  this.sex = sex,
+  this.smoker = smoker,
   this.earthAge = 0,
   this.mercuryAge = 0,
   this.venusAge = 0,
   this.marsAge = 0,
   this.jupiterAge = 0,
-  this.saturnAge = 0;
+  this.saturnAge = 0,
+  this.lifeExpectancy = 79;
 }
 
 GalacticAge.prototype.calculateEarthAge = function(birthdate) {
@@ -70,32 +73,44 @@ GalacticAge.prototype.calculateSaturnAge = function(birthdate) {
   return this.saturnAge;
 };
 
+GalacticAge.prototype.calculateYearsLeft = function(sex, smoker) {
+  if (this.sex === "female" || this.sex === "ftm") {
+    this.lifeExpectancy +=2;
+  } else if (this.sex === "male" || this.sex === "mtf") {
+    this.lifeExpectancy -=2;
+  }
+  if (this.smoker === "yes") {
+    this.lifeExpectancy -=10;
+  }
+  return this.lifeExpectancy;
+};
+
 GalacticAge.prototype.calculateEarthYearsLeft = function() {
-  let earthYearsLeft = 79 - this.earthAge;
+  let earthYearsLeft = this.lifeExpectancy - this.earthAge;
   return earthYearsLeft;
 };
 
 GalacticAge.prototype.calculateMercuryYearsLeft = function() {
-  let mercuryYearsLeft = 79 - this.mercuryAge;
+  let mercuryYearsLeft = this.lifeExpectancy - this.mercuryAge;
   return mercuryYearsLeft;
 };
 
 GalacticAge.prototype.calculateMarsYearsLeft = function() {
-  let marsYearsLeft = 79 - this.marsAge;
+  let marsYearsLeft = this.lifeExpectancy - this.marsAge;
   return marsYearsLeft;
 };
 
 GalacticAge.prototype.calculateVenusYearsLeft = function() {
-  let venusYearsLeft = 79 - this.venusAge;
+  let venusYearsLeft = this.lifeExpectancy - this.venusAge;
   return venusYearsLeft;
 };
 
 GalacticAge.prototype.calculateJupiterYearsLeft = function() {
-  let jupiterYearsLeft = 79 - this.jupiterAge;
+  let jupiterYearsLeft = this.lifeExpectancy - this.jupiterAge;
   return jupiterYearsLeft;
 };
 
 GalacticAge.prototype.calculateSaturnYearsLeft = function() {
-  let saturnYearsLeft = 79 - this.saturnAge;
+  let saturnYearsLeft = this.lifeExpectancy - this.saturnAge;
   return saturnYearsLeft;
 };

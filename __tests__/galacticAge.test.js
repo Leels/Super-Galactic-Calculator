@@ -2,7 +2,7 @@ import { GalacticAge } from './../src/backend.js';
 
 
 describe ('GalacticAge', () => {
-  const newGalacticAge = new GalacticAge("September 19, 1987");
+  const newGalacticAge = new GalacticAge("September 19, 1987", "female", "no");
 
   test('should correctly determine users age in earth years from birthdate input', () => {
     newGalacticAge.calculateEarthAge("September 19, 1987");
@@ -32,6 +32,11 @@ describe ('GalacticAge', () => {
   test('should correctly determine users age in saturn years from birthdate input', () => {
     newGalacticAge.calculateSaturnAge("September 19, 1987");
     expect(newGalacticAge.saturnAge).toEqual(1);
+  });
+
+  test('should correctly determine life age expectancy', () => {
+    newGalacticAge.calculateYearsLeft("female", "no");
+    expect(newGalacticAge.lifeExpectancy).toEqual(81);
   });
 
   test('should correctly determine how many earth years the user has left', () => {

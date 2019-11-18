@@ -35,12 +35,12 @@ $(document).ready(function() {
 
     $("#find-galactic-age").hide();
     $("#result").show();
+    $("#earth-years").text(newGalacticAge.calculateEarthAge(birthdate));
+    $("#earth-years-left").text(newGalacticAge.calculateEarthYearsLeft(birthdate));
     $("#mercury-years").text(newGalacticAge.calculateMercuryAge(birthdate));
     $("#mercury-years-left").text(newGalacticAge.calculateMercuryYearsLeft(birthdate));
     $("#venus-years").text(newGalacticAge.calculateVenusAge(birthdate));
     $("#venus-years-left").text(newGalacticAge.calculateVenusYearsLeft(birthdate));
-    $("#earth-years").text(newGalacticAge.calculateEarthAge(birthdate));
-    $("#earth-years-left").text(newGalacticAge.calculateEarthYearsLeft(birthdate));
     $("#mars-years").text(newGalacticAge.calculateMarsAge(birthdate));
     $("#mars-years-left").text(newGalacticAge.calculateMarsYearsLeft(birthdate));
     $("#jupiter-years").text(newGalacticAge.calculateJupiterAge(birthdate));

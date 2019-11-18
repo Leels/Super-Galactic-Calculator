@@ -31,7 +31,7 @@ describe ('GalacticAge', () => {
 
   test('should correctly determine users age in saturn years from birthdate input', () => {
     newGalacticAge.calculateSaturnAge("September 19, 1987");
-    expect(newGalacticAge.saturnAge).toEqual(0);
+    expect(newGalacticAge.saturnAge).toEqual(1);
   });
 
   test('should correctly determine life age expectancy', () => {
@@ -72,6 +72,6 @@ describe ('GalacticAge', () => {
   test('should correctly determine how many saturn years the user has left', () => {
     let saturnYearsLeft = 79 - newGalacticAge.saturnAge;
     newGalacticAge.calculateSaturnYearsLeft("September 19, 1987");
-    expect(saturnYearsLeft).toEqual(79);
+    expect(saturnYearsLeft).toEqual(78);
   });
 });

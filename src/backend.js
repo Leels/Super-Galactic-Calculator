@@ -60,8 +60,8 @@ GalacticAge.prototype.calculateJupiterAge = function(birthdate) {
 };
 
 GalacticAge.prototype.calculateSaturnAge = function(birthdate) {
-  this.msaturnAge = Math.floor(this.earthAge/29.5);
-  return this.saturnyAge;
+  this.saturnAge = Math.floor(this.earthAge/29.5);
+  return this.saturnAge;
 };
 
 
@@ -72,6 +72,9 @@ GalacticAge.prototype.calculateEarthYearsLeft = function() {
 
 GalacticAge.prototype.calculateMercuryYearsLeft = function() {
   let mercuryYearsLeft = this.lifeExpectancy - this.mercuryAge;
+  if (mercuryYearsLeft < 0) {
+     mercuryYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(mercuryYearsLeft) + " years!"
+  }
   return mercuryYearsLeft;
 };
 

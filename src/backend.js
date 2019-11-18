@@ -27,52 +27,6 @@ GalacticAge.prototype.calculateEarthAge = function(birthdate) {
   return this.earthAge;
 };
 
-GalacticAge.prototype.calculateMercuryAge = function(birthdate) {
-  let dateParseMethod = Date.parse(birthdate);
-  let dateNowMethod = Date.now();
-  let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  //8.64e+7 = second*minute*hour*day in e notation--
-  let ageInMercuryYears = Math.floor((ageInMilliseconds/8.64e+7)/88);
-  this.mercuryAge = ageInMercuryYears;
-  return this.mercuryAge;
-};
-
-GalacticAge.prototype.calculateVenusAge = function(birthdate) {
-  let dateParseMethod = Date.parse(birthdate);
-  let dateNowMethod = Date.now();
-  let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  let ageInVenusYears = Math.floor((ageInMilliseconds/8.64e+7)/225);
-  this.venusAge = ageInVenusYears;
-  return this.venusAge;
-};
-
-GalacticAge.prototype.calculateMarsAge = function(birthdate) {
-  let dateParseMethod = Date.parse(birthdate);
-  let dateNowMethod = Date.now();
-  let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  let ageInMarsYears = Math.floor((ageInMilliseconds/8.64e+7)/687);
-  this.marsAge = ageInMarsYears;
-  return this.marsAge;
-};
-
-GalacticAge.prototype.calculateJupiterAge = function(birthdate) {
-  let dateParseMethod = Date.parse(birthdate);
-  let dateNowMethod = Date.now();
-  let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  let ageInJupiterYears = Math.floor((ageInMilliseconds/8.64e+7)/4307);
-  this.jupiterAge = ageInJupiterYears;
-  return this.jupiterAge;
-};
-
-GalacticAge.prototype.calculateSaturnAge = function(birthdate) {
-  let dateParseMethod = Date.parse(birthdate);
-  let dateNowMethod = Date.now();
-  let ageInMilliseconds = dateNowMethod - dateParseMethod;
-  let ageInSaturnYears = Math.floor((ageInMilliseconds/8.64e+7)/10731);
-  this.saturnAge = ageInSaturnYears;
-  return this.saturnAge;
-};
-
 GalacticAge.prototype.calculateYearsLeft = function(sex, smoker) {
   if (this.sex === "female" || this.sex === "ftm") {
     this.lifeExpectancy +=2;
@@ -84,6 +38,32 @@ GalacticAge.prototype.calculateYearsLeft = function(sex, smoker) {
   }
   return this.lifeExpectancy;
 };
+
+GalacticAge.prototype.calculateMercuryAge = function(birthdate) {
+  this.mercuryAge = Math.floor(this.earthAge/.24);
+  return this.mercuryAge;
+};
+
+GalacticAge.prototype.calculateVenusAge = function(birthdate) {
+  this.venusAge = Math.floor(this.earthAge/.62);
+  return this.venusAge;
+};
+
+GalacticAge.prototype.calculateMarsAge = function(birthdate) {
+  this.marsAge = Math.floor(this.earthAge/1.88);
+  return this.marsAge;
+};
+
+GalacticAge.prototype.calculateJupiterAge = function(birthdate) {
+  this.jupiterAge = Math.floor(this.earthAge/11.86);
+  return this.jupiterAge;
+};
+
+GalacticAge.prototype.calculateSaturnAge = function(birthdate) {
+  this.msaturnAge = Math.floor(this.earthAge/29.5);
+  return this.saturnyAge;
+};
+
 
 GalacticAge.prototype.calculateEarthYearsLeft = function() {
   let earthYearsLeft = this.lifeExpectancy - this.earthAge;

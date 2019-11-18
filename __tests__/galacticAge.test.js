@@ -16,7 +16,7 @@ describe ('GalacticAge', () => {
 
   test('should correctly determine users age in venus years from birthdate input', () => {
     newGalacticAge.calculateVenusAge("September 19, 1987");
-    expect(newGalacticAge.venusAge).toEqual(52);
+    expect(newGalacticAge.venusAge).toEqual(51);
   });
 
   test('should correctly determine users age in mars years from birthdate input', () => {
@@ -31,7 +31,7 @@ describe ('GalacticAge', () => {
 
   test('should correctly determine users age in saturn years from birthdate input', () => {
     newGalacticAge.calculateSaturnAge("September 19, 1987");
-    expect(newGalacticAge.saturnAge).toEqual(1);
+    expect(newGalacticAge.saturnAge).toEqual(0);
   });
 
   test('should correctly determine life age expectancy', () => {
@@ -54,7 +54,7 @@ describe ('GalacticAge', () => {
   test('should correctly determine how many venus years the user has left', () => {
     let venusYearsLeft = 79 - newGalacticAge.venusAge;
     newGalacticAge.calculateVenusYearsLeft("September 19, 1987");
-    expect(venusYearsLeft).toEqual(27);
+    expect(venusYearsLeft).toEqual(28);
   });
 
   test('should correctly determine how many mars years the user has left', () => {
@@ -72,6 +72,6 @@ describe ('GalacticAge', () => {
   test('should correctly determine how many saturn years the user has left', () => {
     let saturnYearsLeft = 79 - newGalacticAge.saturnAge;
     newGalacticAge.calculateSaturnYearsLeft("September 19, 1987");
-    expect(saturnYearsLeft).toEqual(78);
+    expect(saturnYearsLeft).toEqual(79);
   });
 });

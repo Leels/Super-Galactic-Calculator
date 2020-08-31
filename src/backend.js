@@ -68,7 +68,7 @@ GalacticAge.prototype.calculateSaturnAge = function(birthdate) {
 GalacticAge.prototype.calculateEarthYearsLeft = function() {
   let earthYearsLeft = this.lifeExpectancy - this.earthAge;
   if (earthYearsLeft < 0) {
-     earthYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(earthYearsLeft) + " years!"
+    earthYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(earthYearsLeft) + " years!";
   }
   return earthYearsLeft;
 };
@@ -76,7 +76,7 @@ GalacticAge.prototype.calculateEarthYearsLeft = function() {
 GalacticAge.prototype.calculateMercuryYearsLeft = function() {
   let mercuryYearsLeft = this.lifeExpectancy - this.mercuryAge;
   if (mercuryYearsLeft < 0) {
-     mercuryYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(mercuryYearsLeft) + " years!"
+    mercuryYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(mercuryYearsLeft) + " years!";
   }
   return mercuryYearsLeft;
 };
@@ -84,7 +84,7 @@ GalacticAge.prototype.calculateMercuryYearsLeft = function() {
 GalacticAge.prototype.calculateMarsYearsLeft = function() {
   let marsYearsLeft = this.lifeExpectancy - this.marsAge;
   if (marsYearsLeft < 0) {
-     marsYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(marsYearsLeft) + " years!"
+    marsYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(marsYearsLeft) + " years!";
   }
   return marsYearsLeft;
 };
@@ -92,7 +92,7 @@ GalacticAge.prototype.calculateMarsYearsLeft = function() {
 GalacticAge.prototype.calculateVenusYearsLeft = function() {
   let venusYearsLeft = this.lifeExpectancy - this.venusAge;
   if (venusYearsLeft < 0) {
-     venusYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(venusYearsLeft) + " years!"
+    venusYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(venusYearsLeft) + " years!";
   }
   return venusYearsLeft;
 };
@@ -100,7 +100,7 @@ GalacticAge.prototype.calculateVenusYearsLeft = function() {
 GalacticAge.prototype.calculateJupiterYearsLeft = function() {
   let jupiterYearsLeft = this.lifeExpectancy - this.jupiterAge;
   if (jupiterYearsLeft < 0) {
-     jupiterYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(jupiterYearsLeft) + " years!"
+    jupiterYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(jupiterYearsLeft) + " years!";
   }
   return jupiterYearsLeft;
 };
@@ -108,7 +108,7 @@ GalacticAge.prototype.calculateJupiterYearsLeft = function() {
 GalacticAge.prototype.calculateSaturnYearsLeft = function() {
   let saturnYearsLeft = this.lifeExpectancy - this.saturnAge;
   if (saturnYearsLeft < 0) {
-     saturnYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(saturnYearsLeft) + " years!"
+    saturnYearsLeft= "Holy crap you're old! You've outlived your life expectancy by " + Math.abs(saturnYearsLeft) + " years!";
   }
   return saturnYearsLeft;
 };

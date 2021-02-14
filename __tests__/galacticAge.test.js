@@ -6,7 +6,7 @@ describe ('GalacticAge', () => {
 
   test('should correctly determine users age in earth years from birthdate input', () => {
     newGalacticAge.calculateEarthAge("September 19, 1987");
-    expect(newGalacticAge.earthAge).toEqual(32);
+    expect(newGalacticAge.earthAge).toEqual(33);
   });
 
   test('should correctly determine users age in mercury years from birthdate input', () => {

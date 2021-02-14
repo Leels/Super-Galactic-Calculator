@@ -1,110 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Super Galactic Age Calculator</title>
 </head>
+
 <body>
   <div class="stars">
     <div class="twinkling">
-        <div class="container">
-          <h1>Super Galactic Age Calculator</h1>
-          <form id="find-galactic-age">
-              <h2>Enter the information below to learn more about your solar age thoughout our solar system</h2>
-              <h3 for="birthdate">Birthdate:</h3>
-              <div class="form-group">
-              <input type="text" id="birthdate" placeholder="November 15, 2019">
-            </div>
-            <h3>Sex:</h3>
-            <div class="form-group">
-            <div class="radio">
-            <h5><input name="sex" type="radio" value="male"> Male<span id="sex"></h5>
+      <div class="container">
+        <h1>Super Galactic Age Calculator</h1>
+        <form id="find-galactic-age">
+          <h2>Enter the information below to learn more about your solar age thoughout our solar system</h2>
+          <h3 for="birthdate">Birthdate:</h3>
+          <div class="form-group">
+            <input type="text" id="birthdate" placeholder="November 15, 2019">
           </div>
+          <h3>Sex:</h3>
+          <div class="form-group">
+            <div class="radio">
+              <h5><input name="sex" type="radio" value="male"> Male<span id="sex"></h5>
+            </div>
             <div class="radio">
               <h5><input name="sex" type="radio" value="female"> Female<span id="sex"></h5>
             </div>
             <div class="radio">
-              <h5><input name="sex" type="radio" value="intersex"> Intersex</h5>
-            </div>
-            <div class="radio">
-              <h5><input name="sex" type="radio" value="mtf"> MtF Female</h5>
-            </div>
-            <div class="radio">
-              <h5><input name="sex" type="radio" value="ftm"> FtM Male</h5>
+              <h5><input name="sex" type="radio" value="na"> N/A</h5>
             </div>
           </div>
           <h3>Are you a smoker?</h3>
           <div class="form-group">
-          <div class="radio">
-          <h5><input name="smoker" type="radio" value="yes"> Yes<span id="smoker"></h5>
-        </div>
-          <div class="radio">
-            <h5><input name="smoker" type="radio" value="no"> No<span id="smoker"></h5>
+            <div class="radio">
+              <h5><input name="smoker" type="radio" value="yes"> Yes<span id="smoker"></h5>
+            </div>
+            <div class="radio">
+              <h5><input name="smoker" type="radio" value="no"> No<span id="smoker"></h5>
+            </div>
+            <div class="radio">
+              <h5><input name="smoker" type="radio" value="socially"> Only socially<span id="smoker"></h5>
+            </div>
           </div>
-          <div class="radio">
-            <h5><input name="smoker" type="radio" value="socially"> Only socially<span id="smoker"></h5>
-          </div>
-        </div>
-            <button type="submit" class="btn btn-warning">Blast off!</button>
-          </form>
-        </div>
-        <div class="container">
-          <div id="result">
-            <h4>Click on the planets below</h4>
-            <div class="row">
-              <div class="col-lg-4" id="mercury">
-                <div class="well">
-                  <h2 class="show">Mercury</h2>
-                  <p><img src="https://www.exploratorium.edu/ronh/age/images/mercury.gif" alt="Mercury"></p>
-                  <p>Your age in Mercurian Years: <span id="mercury-years"></span></p>
-                  <p>Years you have left to live on this planet: <span id="mercury-years-left"></span></p>
-                </div>
-              </div>
-              <div class="col-lg-4" id="venus">
-                <div class="well">
-                  <h2 class="show">Venus</h2>
-                  <p><img src="https://www.exploratorium.edu/ronh/age/images/venus.gif" alt="Venus"></p>
-                  <p>Your age in Venusian Years: <span id="venus-years"></span></p>
-                  <p>Years you have left to live on this planet: <span id="venus-years-left"></span></p>
-                </div>
-              </div>
-              <div class="col-lg-4" id="earth">
-                <div class="well">
-                  <h2 class="show">Earth</h2>
-                  <p><img src="https://www.exploratorium.edu/ronh/age/images/earth.gif" alt="Earth"></p>
-                  <p>Your age in Earth Years: <span id="earth-years"></span>.</p>
-                  <p>Years you have left to live on this planet: <span id="earth-years-left"></span></p>
-                </div>
+          <button type="submit" class="btn btn-warning">Blast off!</button>
+        </form>
+      </div>
+      <div class="container">
+        <div id="result">
+          <h4>Click on the planets below</h4>
+          <div class="row">
+            <div class="col-lg-4" id="mercury">
+              <div class="well">
+                <h2 class="show">Mercury</h2>
+                <p><img src="https://www.exploratorium.edu/ronh/age/images/mercury.gif" alt="Mercury"></p>
+                <p>Your age in Mercurian Years: <span id="mercury-years"></span></p>
+                <p>Years you have left to live on this planet: <span id="mercury-years-left"></span></p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-4" id="mars">
-                <div class="well">
-                  <h2 class="show">Mars</h2>
-                  <p><img src="https://www.exploratorium.edu/ronh/age/images/mars.gif" alt="Mars"></p>
-                  <p>Your age in Martian Years: <span id="mars-years"></span></p>
-                  <p>Years you have left to live on this planet: <span id="mars-years-left"></span></p>
-                </div>
+            <div class="col-lg-4" id="venus">
+              <div class="well">
+                <h2 class="show">Venus</h2>
+                <p><img src="https://www.exploratorium.edu/ronh/age/images/venus.gif" alt="Venus"></p>
+                <p>Your age in Venusian Years: <span id="venus-years"></span></p>
+                <p>Years you have left to live on this planet: <span id="venus-years-left"></span></p>
               </div>
-              <div class="col-lg-4" id="jupiter">
-                <div class="well">
-                  <h2 class="show">Jupiter</h2>
-                  <p><img src="https://www.exploratorium.edu/ronh/age/images/jupiter.gif" alt="Jupiter"></p>
-                  <p>Your age in Jovian Years: <span id="jupiter-years"></span></p>
-                  <p>Years you have left to live on this planet: <span id="jupiter-years-left"></span></p>
-                </div>
+            </div>
+            <div class="col-lg-4" id="earth">
+              <div class="well">
+                <h2 class="show">Earth</h2>
+                <p><img src="https://www.exploratorium.edu/ronh/age/images/earth.gif" alt="Earth"></p>
+                <p>Your age in Earth Years: <span id="earth-years"></span>.</p>
+                <p>Years you have left to live on this planet: <span id="earth-years-left"></span></p>
               </div>
-              <div class="col-lg-4" id="saturn">
-                <div class="well">
-                  <h2 class="show">Saturn</h2>
-                  <p><img src="https://www.exploratorium.edu/ronh/age/images/saturn.gif" alt="Saturn"></p>
-                  <p>Your age in Saturian Years: <span id="saturn-years"></span></p>
-                  <p>Years you have left to live on this planet: <span id="saturn-years-left"></span></p>
-                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4" id="mars">
+              <div class="well">
+                <h2 class="show">Mars</h2>
+                <p><img src="https://www.exploratorium.edu/ronh/age/images/mars.gif" alt="Mars"></p>
+                <p>Your age in Martian Years: <span id="mars-years"></span></p>
+                <p>Years you have left to live on this planet: <span id="mars-years-left"></span></p>
+              </div>
+            </div>
+            <div class="col-lg-4" id="jupiter">
+              <div class="well">
+                <h2 class="show">Jupiter</h2>
+                <p><img src="https://www.exploratorium.edu/ronh/age/images/jupiter.gif" alt="Jupiter"></p>
+                <p>Your age in Jovian Years: <span id="jupiter-years"></span></p>
+                <p>Years you have left to live on this planet: <span id="jupiter-years-left"></span></p>
+              </div>
+            </div>
+            <div class="col-lg-4" id="saturn">
+              <div class="well">
+                <h2 class="show">Saturn</h2>
+                <p><img src="https://www.exploratorium.edu/ronh/age/images/saturn.gif" alt="Saturn"></p>
+                <p>Your age in Saturian Years: <span id="saturn-years"></span></p>
+                <p>Years you have left to live on this planet: <span id="saturn-years-left"></span></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </body>
+
 </html>

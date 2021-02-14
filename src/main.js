@@ -1,8 +1,8 @@
+import { GalacticAge } from './backend.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { GalacticAge } from './backend.js';
 
 $(document).ready(function() {
   $("form#find-galactic-age").submit(function(event) {
@@ -35,6 +35,7 @@ $(document).ready(function() {
 
     $("#find-galactic-age").hide();
     $("#result").show();
+
     $("#earth-years").text(newGalacticAge.calculateEarthAge(birthdate));
     $("#earth-years-left").text(newGalacticAge.calculateEarthYearsLeft(birthdate));
     $("#mercury-years").text(newGalacticAge.calculateMercuryAge(birthdate));
